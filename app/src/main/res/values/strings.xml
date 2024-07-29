@@ -1,0 +1,15 @@
+<resources>
+    <string name="click">Click</string>
+    <string name="view_old_images">View Old Images</string>
+    <string name="todo">To Do</string>
+    <string name="toggle_flashlight">Toggle Flashlight</string>
+    <string name="focus_indicator">Focus Indicator</string>
+    <string name="captured_image">Captured Image</string>
+    <string name="keep">Keep</string>
+    <string name="delete">Delete</string>
+    <string name="take_more">Take More</string>
+    <string name="appicon">App Icon</string>
+    <string name="pixelcam">PixelCam</string>
+    <string name="loading">Loading...</string>
+    <string name="app_name">label</string>
+</resources>

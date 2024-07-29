@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".CameraActivity">
+
+    <!-- Camera preview view taking 5/6 of the screen -->
+    <androidx.camera.view.PreviewView
+        android:id="@+id/camera_preview_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/bottom_guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Guideline to divide the screen -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/bottom_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.87" />
+
+    <!-- Button to capture image -->
+    <Button
+        android:id="@+id/button_capture"
+        android:layout_width="74dp"
+        android:layout_height="72dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/icon"
+        android:contentDescription="@string/click"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Button to view old images -->
+
+    <!-- ImageView to show captured image preview -->
+
+    <ImageButton
+        android:id="@+id/button_old_images"
+        android:layout_width="66dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginBottom="12dp"
+        android:contentDescription="@string/view_old_images"
+        android:scaleType="fitCenter"
+        android:src="@drawable/albumphoto"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button_capture" />
+
+    <ImageView
+        android:id="@+id/image_preview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="@string/todo"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Additional ImageView -->
+
+    <!-- Button to toggle flashlight -->
+
+    <ImageView
+        android:id="@+id/selfie"
+        android:layout_width="70dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/round_white_background"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button_capture"
+        app:srcCompat="@drawable/rotate" />
+
+    <ImageButton
+        android:id="@+id/button_flashlight"
+        android:layout_width="54dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:background="#FFFCFC"
+        android:contentDescription="@string/toggle_flashlight"
+        android:scaleType="fitCenter"
+        android:src="@drawable/flash"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/focus_indicator"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:visibility="gone"
+        android:src="@drawable/focus_indicator"
+        android:contentDescription="@string/focus_indicator"
+        app:layout_constraintBottom_toBottomOf="@id/camera_preview_view"
+        app:layout_constraintEnd_toEndOf="@id/camera_preview_view"
+        app:layout_constraintStart_toStartOf="@id/camera_preview_view"
+        app:layout_constraintTop_toTopOf="@id/camera_preview_view" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
